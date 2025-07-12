@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# 📚 Student Registration & Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack MERN (MongoDB, Express, React, Node.js) web application that allows teachers to register, manage, edit, and delete student information, including subject-wise marks.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+### 👩‍🏫 Teacher Dashboard
+- View all registered students.
+- Edit student details like:
+  - First Name
+  - Last Name
+  - Email
+  - Subject-wise marks (JSON format)
+- Delete a student permanently.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🎓 Student Management
+- Add new students with validations:
+  - Email format
+  - Unique email and address
+  - Age must be greater than 18
+  - Name must contain only alphabets
+- Store profile picture URL, address, and age.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🔐 Authentication & Authorization
+- Secure login and signup for both teachers and students.
+- JWT-based session management.
+- Role-based filtering (only `student` role shown in Teacher Dashboard).
 
-### `npm test`
+### 📨 Email Notifications
+- Sends confirmation email upon successful student signup using Gmail and Nodemailer.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 📦 Persistent Storage
+- MongoDB used for storing all user data including:
+  - Personal details
+  - Marks (JSON)
+  - Authentication data
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Technology     | Purpose                     |
+|----------------|-----------------------------|
+| React          | Frontend UI                 |
+| Apollo Client  | GraphQL client for React    |
+| Node.js        | Backend runtime             |
+| Express.js     | Web server for APIs         |
+| Apollo Server  | GraphQL API layer           |
+| MongoDB        | Database                    |
+| Mongoose       | ODM for MongoDB             |
+| GraphQL        | Data query language         |
+| Nodemailer     | Email notifications         |
+| JSON Web Token | Authentication (JWT)        |
+| Tailwind CSS   | UI styling (optional)       |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🧪 Validation Rules
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- `firstName` and `lastName`: Alphabets only (regex validated).
+- `email`: Must be valid format and unique.
+- `age`: Must be greater than 18.
+- `address`: Unique field for every user.
+- `marks`: Accepts JSON format (e.g., `{ "math": 80, "english": 90 }`).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🔗 Resources & References
 
-## Learn More
+The following tools and online documentation were used while developing this application:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 🔍 Official Docs
+- [React](https://reactjs.org/docs/getting-started.html)
+- [Apollo Client & Server](https://www.apollographql.com/docs/)
+- [GraphQL](https://graphql.org/)
+- [Mongoose](https://mongoosejs.com/docs/)
+- [Nodemailer](https://nodemailer.com/about/)
+- [JWT](https://jwt.io/introduction/)
+- [dotenv](https://www.npmjs.com/package/dotenv)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 🧑‍💻 Community Help
+- [Stack Overflow](https://stackoverflow.com/)
+- [FreeCodeCamp](https://www.freecodecamp.org/)
+- [MDN Web Docs](https://developer.mozilla.org/)
+- [GeeksforGeeks GraphQL Tutorials](https://www.geeksforgeeks.org/graphql/)
+- [YouTube Tutorials (Traversy Media, Net Ninja)](https://www.youtube.com/)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
