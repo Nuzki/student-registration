@@ -88,4 +88,8 @@ The following tools and online documentation were used while developing this app
 - [GeeksforGeeks GraphQL Tutorials](https://www.geeksforgeeks.org/graphql/)
 - [YouTube Tutorials (Traversy Media, Net Ninja)](https://www.youtube.com/)
 
-
+## Setup
+1. Clone the repository.
+2. Install dependencies: npm install (frontend) and set up backend with Node.js/Express/MongoDB.
+3. Start the backend: node server.js (ensure MongoDB is running).
+4. Start the frontend: npm start.
